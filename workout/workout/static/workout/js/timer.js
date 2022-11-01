@@ -32,7 +32,7 @@ function countdown() {
             countdown()
         }
         else {
-            workoutsList[counter].style.backgroundColor = "#41DB00";
+            workoutsList[counter].style.backgroundColor = "#B3EAB6";
         }
     }
     else {
@@ -44,30 +44,32 @@ function pause() {
     clearTimeout(timer)
 };
 
-// function forward() {
-//     counter++;
-//     console.log(counter)
-//     pause()
-//     if (counter <= workoutsList.length - 1) {
-//         plankComplete()
-//     }
-//     else {
-//         counter = 5;
-//     }
-// };
+function forward() {
+    pause()
+    if (counter < workoutsList.length - 1) {
+        counter++;
+        plankComplete()
+        workoutsList[counter-1].style.backgroundColor = "#B3EAB6";
+        trainingTime = Number(document.getElementsByClassName("p-time")[0].textContent)
 
-// function backward() {
-//     counter--;
-//     console.log(counter)
-//     pause()
-//     if (counter >= 0) {
-//         plankComplete()
-//         workoutsList[counter].style.backgroundColor = "whitesmoke";
-//     }
-//     else {
-//         counter = 1;
-//     }
-// };
+    }
+    else {
+        counter = workoutsList.length - 1;
+    }
+};
+
+function backward() {
+    pause()
+    if (counter > 0) {
+        counter--;
+        plankComplete()
+        workoutsList[counter].style.backgroundColor = "whitesmoke";
+        trainingTime = Number(document.getElementsByClassName("p-time")[0].textContent)
+    }
+    else {
+        counter = 0;
+    }
+};
 
 function plankComplete() {
     // Изображение
