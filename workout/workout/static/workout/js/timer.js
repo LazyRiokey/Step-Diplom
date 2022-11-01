@@ -25,7 +25,7 @@ function countdown() {
 
     if (trainingTime < 0) {
         if (counter < workoutsList.length - 1) {
-            workoutsList[counter].style.backgroundColor = "#41DB00";
+            workoutsList[counter].style.backgroundColor = "#B3EAB6";
             counter++;
             plankComplete()
             trainingTime = Number(document.querySelector(".p-time").innerText)
