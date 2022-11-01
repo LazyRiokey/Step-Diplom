@@ -38,7 +38,7 @@
 
 .first-flexbox p, .second-flexbox p, .third-flexbox p {
     position: relative;
-    bottom: 30px;
+    bottom: 50px;
     padding: 0px 10px 0px 10px;
     text-align: center;
     color: rgba(0, 0, 0, 0.568);
