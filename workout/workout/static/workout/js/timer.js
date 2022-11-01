@@ -49,7 +49,7 @@ function forward() {
     if (counter < workoutsList.length - 1) {
         counter++;
         plankComplete()
-        workoutsList[counter-1].style.backgroundColor = "#B3EAB6";
+        workoutsList[counter - 1].style.backgroundColor = "#B3EAB6";
         trainingTime = Number(document.getElementsByClassName("p-time")[0].textContent)
 
     }
