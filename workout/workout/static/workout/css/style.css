@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url(nav.css);
+@import url(footer.css);
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(212, 212, 212, 0.486);
+}

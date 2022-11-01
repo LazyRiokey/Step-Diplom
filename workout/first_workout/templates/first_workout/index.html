@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'workout/css/first_page.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/second_page.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/second_page_animations.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/third_page.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/third_page_animations.css' %}">
+{% endblock style %}
+
+{% block body %}
+<div class="first-page-container">
+    <div class="child">
+        <p>Working out every day is necessary to be healthy</p>
+        <div class="next-child">
+            <p>But it is not necessary to train in the gym every day
+            </p>
+        </div>
+    </div>
+</div>
+<div class="second-page-container">
+    <div class="header">
+        <h1>Make Plank Fun</h1>
+    </div>
+    <div class="flex-container-icons">
+        <div class="first-flexbox">
+            <div class="icon-box">
+                <img class="icon" src="media\icons\3048342.png" alt="stretching-image">
+            </div>
+            <h2>Stretching</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cupiditate in possimus similique ad tempore
+                quidem et sunt mollitia.</p>
+        </div>
+        <div class="second-flexbox">
+            <div class="icon-box">
+                <img class="icon" src="media\icons\2843746.png" alt="side-plank-image">
+            </div>
+            <h2>Plank</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cupiditate in possimus similique ad tempore
+                quidem et sunt mollitia.</p>
+        </div>
+        <div class="third-flexbox">
+            <div class="icon-box">
+                <img class="icon" src="media\icons\2647603.png" alt="yoga-image">
+            </div>
+            <h2>Yoga</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cupiditate in possimus similique ad tempore
+                quidem et sunt mollitia.</p>
+        </div>
+    </div>
+</div>
+<div class="third-page-container">
+    <div class="third-page-box-1">
+        <img class="collage-1" src="media\images\plank-collage-1.jpg" alt="plank-collage-1">
+    </div>
+    <div class="third-page-box-2">
+        <img class="collage-2" src="media\images\plank-collage-2.jpg" alt="plank-collage-2">
+    </div>
+    <div class="third-page-box-3">
+        <img class="collage-3" src="media\images\plank-collage-3.jpg" alt="plank-collage-3">
+    </div>
+    <div class="third-page-box-4">
+        <img class="collage-4" src="media\images\plank-collage-4.jpg" alt="plank-collage-4">
+    </div>
+    <div class="circle-text-container">
+        <h2>Combine different types of planks with other workouts and don't forget to rest - then you will achieve
+            amazing results</h2>
+        <button class="button1"><a href="{% url 'workouts' %}">Learn More</a></button>
+    </div>
+</div>
+{% endblock body %}

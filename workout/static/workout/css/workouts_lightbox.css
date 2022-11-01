@@ -1,0 +1,59 @@
+/* Информация взята с https://developer.mozilla.org/ru/docs/Web/CSS/:target */
+/* Закрываем lightbox */
+.lightbox {
+    display: none;
+}
+
+/* Открываем lightbox */
+.lightbox:target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Содержимое lightbox  */
+.lightbox figcaption {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+.lightbox figcaption {
+    animation-name: scale-up-center;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes scale-up-center {
+
+    0% {
+        transform: scale(.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Обёртка lightbox  */
+.lightbox .close::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    content: "";
+    cursor: default;
+}

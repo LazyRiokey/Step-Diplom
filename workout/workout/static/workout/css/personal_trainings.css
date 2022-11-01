@@ -1,0 +1,120 @@
+.div-main-trainings-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #f1f1f1;
+}
+
+.div-main-trainings-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 526px;
+    height: 150px;
+}
+
+.div-main-trainings-header h1,
+.div-category-box h2,
+.div-noncategory-box h2,
+.circle p, .rest-plank-p,
+.div-category-name p {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.div-main-trainings-header h1,
+.div-category-name h2 {
+    margin: 0;
+}
+
+.div-main-trainings-header h1 {
+    padding-top: 30px;
+}
+
+.div-categories-flex,
+.div-category-flex {
+    display: flex;
+    justify-content: center;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-categories-flex {
+    width: 860px;
+}
+
+.div-category-flex {
+    flex-wrap: wrap; 
+    width: 809px;
+    height: 650px;
+}
+
+.div-categories-flex a {
+    text-decoration: none;
+    color: black;
+}
+
+.div-category-box,
+.div-noncategory-box {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 3px 10px;
+    background: linear-gradient(90deg,#E4D8EC,#E0E0E8,#E0E0E8,#DCDCE4,#E4DCE4);
+}
+
+.div-category-box{
+    width: 250px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.div-category-box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.div-noncategory-box {
+    height: 625px;
+    width: 300px;
+}
+
+.div-category-box h2,
+.div-noncategory-box h2 {
+    padding-top: 20px;
+    letter-spacing: 2px;
+}
+
+.height-rest-img {
+    position: relative;
+    z-index: 1;
+    bottom: 74px;
+    width: 300px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    margin: 30px auto;
+    border-radius: 90px;
+    border: green 2px solid;
+}
+
+.circle p {
+    margin: 10px 0px 0px 2px;
+}
+
+.circle p, .div-category-name p {
+    font-size: 20px;
+}
+
+.rest-plank-p {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 0px 30px 0px 30px;
+}
+
+.category-img {
+    width: 250px
+}

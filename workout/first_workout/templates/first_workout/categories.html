@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="{% static 'workout/css/personal_trainings.css' %}">
+
+{% endblock style %}
+
+{% block title %}Your Trainings{% endblock title %}
+
+{% block body %}
+
+    <div class="div-main-trainings-container">
+        <div class="div-main-trainings-header">
+            <h1>Choose from the proposed training plan or let's create a personal one</h1>
+        </div>
+        <div class="div-categories-flex">
+            <div class="div-noncatecoty-flex">
+                <div class="div-noncategory-box">
+                    <div class="div-category-name">
+                        <h2>Don't forget to rest</h2>
+                        <div class="circle"><p>30</p></div><p class="rest-plank-p"> seconds is the ideal recovery time between exercises</p>
+                        <img class="height-rest-img" src="../../../media/images/plank-rest.png" alt="plank-rest">
+                    </div>
+                </div>
+            </div>
+            <div class="div-category-flex">
+                {% for field in object_list %}
+                <a href="{% url 'basic' pk=field.pk %}">
+                    <div class="div-category-box">
+                        <div class="div-category-name">
+                            <h2>{{field.title}}</h2>
+                            <img class="category-img" src="{{field.img.url}}" alt="my_trainings">
+                            <p>{{field.short_description}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}    
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

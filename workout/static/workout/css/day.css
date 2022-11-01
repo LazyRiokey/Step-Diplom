@@ -1,0 +1,5 @@
+.div-main-day-workout-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: linear-gradient(to right top, #e3b0cc, #d7b3d2, #cbb6d5, #c1b9d5, #b9bbd2, #b9bad1, #b9b9d1, #b9b8d0, #c1b4d1, #ccb0ce, #d8abc7, #e3a6bc);
+}

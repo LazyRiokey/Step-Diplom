@@ -1,0 +1,16 @@
+footer {
+    height: 100px;
+    background-color: #333333;
+}
+
+footer p {
+    margin: 0px;
+    padding-top: 39px;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-style: italic;
+}

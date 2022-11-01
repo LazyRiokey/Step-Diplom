@@ -1,0 +1,92 @@
+.third-page-container {
+    background-color: #332929;
+    height: 1300px;
+}
+
+.third-page-box-1, .third-page-box-2,
+.third-page-box-3, .third-page-box-4,
+.circle-text-container {
+    position: relative;
+}
+
+.third-page-box-1 {
+    width: 350px;
+    height: 500px;
+    top: 180px;
+    left: 400px;
+}
+
+.third-page-box-2 {
+    width: 600px;
+    height: 450px;
+    bottom: 350px;
+    left: 850px;
+}
+
+.third-page-box-3 {
+    width: 600px;
+    height: 450px;
+    bottom: 250px;
+    left: 900px;
+}
+
+.third-page-box-4 {
+    width: 350px;
+    height: 500px;
+    bottom: 650px;
+    left: 370px;
+}
+
+.collage-1, .collage-2,
+.collage-3, .collage-4 {
+    width: auto;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.circle-text-container {
+    width: 520px;
+    height: 520px;
+    border-radius: 360px;
+    background-color: #f1c50e;
+    bottom: 1400px;
+    left: 600px;
+}
+
+.circle-text-container h2 {
+    width: 350px;
+    margin: 0;
+    padding: 115px 0px 0px 85px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.circle-text-container a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+.circle-text-container a:hover {
+    color: black;
+}
+
+.button1 {
+    width: 192px;
+    height: 51px;
+    margin: 40px 0px 0px 165px;
+    border: 0px;
+    border-radius: 90px;
+    background-color: black;
+    font-size: 18px;
+}
+
+.button1:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    transition: 0.3s;
+}

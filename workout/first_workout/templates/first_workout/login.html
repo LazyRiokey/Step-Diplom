@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="{% static 'workout/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/login_animations.css' %}">
+
+{% endblock style %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+<div class="div-login-container">
+    <div class="div-login-form">
+        <form class="login-form", method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <p>Please fill in this form to login.</p>
+            <hr>
+            {{form.as_p}}
+            <button type="submit" class="loginbtn">Login</button>
+            <div class="container signin">
+                <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a>.</p>
+            </div>
+        </form>
+    </div>
+    <div class="div-login-image">
+        <img class="login-img" src="..\media\images\plank-register.jpg" alt="plank-register">
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="{% static 'workout/css/day.css' %}">
+
+{% endblock style %}
+
+{% block title %}Day {{ day }}{% endblock title %}
+
+{% block body %}
+
+<div class="div-main-day-workout-container">
+    <h1>Day {{ day }}</h1>
+    <div class="div-center-flex-container">
+        <div class="div-trainings-container">
+            <div class="div-trainings-title">
+                <h2>Workouts</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.is_completed}}
+                    <button type="submit">Finish day</button>
+                </form>
+            </div>
+            {% for field in object_list %}
+            {% for training, time in field.get_workouts.items %}
+            <div class="div-training">
+                <img src="../../../media/images/Planks/{{training|title}}.jpg" alt="{{training}}">
+                <span><b>{{training}}</b></span>
+                <span>{{time}}s</span>
+            </div>
+            {% if training != "Cobra Stretch" %}
+            <div class="div-training">
+                <img src="../../../media/images/Planks/REST.jpg" alt="">
+                <span><b>Rest</b></span>
+                <span>15s</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="div-current-training-container">
+            <div class="div-current-training-box">
+                <div class="div-img-box">
+                    <img src="../../../media/images/Planks/PLANK.jpg" alt="plank-name">
+                </div>
+                <h2>Plank Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque omnis, itaque officia et nobis
+                    odioconsectetur.</p>
+                <p class="p-time"><span></span>s</p>
+                <div class="div-control">
+                    <input id="backward" type="image"  src="../../../media/icons/backward.png"
+                        alt="backward-button">
+                    <input id="play-stop" type="image" onclick="timerWorkout()" src="../../../media/icons/play.png"
+                        alt="play-pause-button">
+                    <input id="forward" type="image"  src="../../../media/icons/forward.png"
+                        alt="forward-button">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+
+{% block script %}
+    <script src="{% static 'workout/js/timer.js'%}"></script>
+{% endblock script %}

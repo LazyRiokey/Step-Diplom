@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="{% static 'workout/css/workouts.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/paginations_workouts.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/workouts_lightbox.css' %}">
+
+{% endblock style %}
+
+{% block title %}Workouts{% endblock title %}
+
+{% block body %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <div class="a-button">
+                <a href="?page=1">&laquo; </a>
+            </div>
+            <div class="a-button">
+                <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;
+                </a>
+            </div>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <div class="a-button">
+                <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+            </div>
+            <div class="a-button">
+                <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+            </div>
+        {% endif %}
+    </span>
+</div>
+<div class="workouts-container">
+    <div class="workouts-flex">
+        {% for item in object_list %}
+            {% if item.title != "Rest Day" %}
+            <a href="#example{{item.id}}">
+                <div class="training-box">
+                    <img class="plank-img" src="{{item.img.url}}" alt="plank">
+                    <h2 class="workout-title">{{item.title}}</h2>
+                    <p class="workout-information">{{item.short_info}}</p>
+                </div>
+            </a>
+            <div class="lightbox" id="example{{item.id}}">
+                <figure>
+                    <a href="#" class="close"></a>
+                    <figcaption>
+                        <img class="plank-img-max" src="{{item.img.url}}" alt="plank">
+                        <h2 class="workout-title">{{item.title}}</h2>
+                        <p class="workout-information">{{item.full_info}}</p>
+                    </figcaption>
+                </figure>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

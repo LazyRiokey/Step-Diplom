@@ -1,0 +1,42 @@
+.first-page-container {
+    background-image: url("../../../../media/images/main_plank.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -350px;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+
+.child {
+    width: 600px;
+    height: 400px;
+    margin-right: 250px;
+    float: right;
+}
+
+.child p, .next-child p {
+    font-family: 'Oswald', sans-serif;
+}
+
+.child p {
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+}
+
+.next-child {
+    width: 550px;
+    height: 100px;
+    margin-left: 100px;
+    border-radius: 30px;
+    background-color: #f1c50e;
+}
+
+.next-child p {
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+}

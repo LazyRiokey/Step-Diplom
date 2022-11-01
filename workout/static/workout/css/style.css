@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url(nav.css);
+@import url(first_page.css);
+@import url(second_page.css);
+@import url(second_page_animations.css);
+@import url(third_page.css);
+@import url(third_page_animations.css);
+@import url(workouts.css);
+@import url(footer.css);
+@import url(register.css);
+@import url(register_animations.css);
+@import url(login.css);
+@import url(login_animations.css);
+@import url(personal_trainings.css);
+@import url(category_days.css);
+@import url(day.css);
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(212, 212, 212, 0.486);
+}

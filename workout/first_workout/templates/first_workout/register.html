@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="{% static 'workout/css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/register_animations.css' %}">
+
+{% endblock style %}
+
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+<div class="div-register-container">
+    <div class="div-register-form">
+        <form class="register-form", method="post">
+            {% csrf_token %}
+
+            <h1>Register</h1>
+
+            {% if messages %}
+
+                {% for message in messages %}
+            
+                {% if message.tags == "error" %}
+                    <div class="message-container-error">
+                        <p>{{ message }}</p>
+                    </div>
+
+                {% endif %}
+                
+                <hr>
+            
+                {% endfor %}
+
+            {% endif %}
+
+            {{ form.as_p }}
+
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="registerbtn">Register</button>
+            <div class="container signin">
+                <p>Already have an account? <a href="{% url 'login' %}">Sign in</a>.</p>
+            </div>
+        </form>
+    </div>
+    <div class="div-register-image">
+        <img class="ragister-img" src="..\media\images\plank-register.jpg" alt="plank-register">
+    </div>
+</div>
+{% endblock body %}
